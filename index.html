@@ -699,6 +699,230 @@
   .about-photo:hover { filter: grayscale(0%); }
 
 
+
+  /* ── RESOURCES ── */
+  #resources {}
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .resource-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+
+  .resource-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-4px);
+  }
+
+  .resource-card.featured {
+    border-color: var(--gold-dim);
+    grid-column: span 2;
+  }
+
+  .resource-card.coming-soon {
+    opacity: 0.75;
+  }
+
+  .resource-card-inner {
+    padding: 2rem;
+  }
+
+  .resource-badge {
+    display: inline-block;
+    padding: 0.25rem 0.8rem;
+    background: rgba(200,150,42,0.1);
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    font-family: 'Crimson Text', serif;
+  }
+
+  .resource-badge.coming {
+    background: rgba(100,100,100,0.1);
+    border-color: #444;
+    color: var(--white-dim);
+  }
+
+  .resource-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .resource-sub {
+    font-size: 1rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-family: 'Crimson Text', serif;
+  }
+
+  .resource-desc {
+    color: var(--white-dim);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .resource-markets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .market-pill {
+    padding: 0.2rem 0.7rem;
+    background: rgba(200,150,42,0.08);
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-family: 'Crimson Text', serif;
+  }
+
+  .resource-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .resource-meta {
+    font-size: 0.85rem;
+    color: var(--white-dim);
+    font-family: 'Crimson Text', serif;
+  }
+
+  /* ── INSIGHTS ── */
+  #insights {}
+
+  .insights-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .insight-feature {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .insight-icon {
+    font-size: 1.5rem;
+    width: 42px;
+    flex-shrink: 0;
+  }
+
+  .insight-feat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+
+  .insight-feat-desc {
+    font-size: 0.95rem;
+    color: var(--white-dim);
+    line-height: 1.6;
+  }
+
+  .newsletter-card {
+    background: var(--card);
+    border: 1px solid var(--gold-dim);
+    padding: 2rem;
+  }
+
+  .newsletter-card-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    margin-bottom: 0.3rem;
+  }
+
+  .newsletter-card-sub {
+    font-size: 0.95rem;
+    color: var(--white-dim);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .newsletter-card-desc {
+    font-size: 0.95rem;
+    color: var(--white-mid);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .edition-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    padding: 2rem;
+    max-width: 700px;
+  }
+
+  .edition-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+  }
+
+  .edition-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .edition-desc {
+    color: var(--white-dim);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .resource-card.featured { grid-column: span 1; }
+    .insights-layout { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -711,6 +935,10 @@
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#resources">Reports</a></li>
+    <li><a href="#insights">Newsletter</a></li>
+    <li><a href="#resources">Reports</a></li>
+    <li><a href="#insights">Newsletter</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -901,6 +1129,151 @@
     </div>
   </div>
 </section>
+
+
+<div class="gold-bar"></div>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="section-label">White Papers & Reports</div>
+  <h2 class="section-title">Intelligence You Can<br><span>Download & Deploy.</span></h2>
+  <div class="divider"></div>
+  <p style="color:var(--white-mid); font-size:1.1rem; max-width:700px; margin-bottom:3rem; line-height:1.8;">Every report published by Nexus Content Studio is built from original research, real market data and personal experience inside the markets we write about. These are not summaries. They are intelligence documents.</p>
+
+  <div class="resources-grid">
+
+    <div class="resource-card featured">
+      <div class="resource-card-inner">
+        <div class="resource-badge">NEW · 2026</div>
+        <div class="resource-title">The $70 Billion Harvest Gamble</div>
+        <div class="resource-sub">The Crop Farmer's Crisis and the Founders Who Can End It</div>
+        <div class="resource-desc">Three crops. Three crises. Three sets of founders who can end them. This report covers tomato late blight, rice bird damage and maize post-harvest losses across seven markets — with documented technology solutions for each crisis.</div>
+        <div class="resource-markets">
+          <span class="market-pill">Uganda</span>
+          <span class="market-pill">Kenya</span>
+          <span class="market-pill">Tanzania</span>
+          <span class="market-pill">India</span>
+          <span class="market-pill">Netherlands</span>
+          <span class="market-pill">Indonesia</span>
+          <span class="market-pill">France</span>
+        </div>
+        <div class="resource-footer">
+          <span class="resource-meta">20 pages · Market Intelligence · March 2026</span>
+          <a href="mailto:Adewumi.writer@gmail.com?subject=Request: The Harvest Gamble Report" class="btn-primary" style="font-size:0.85rem; padding:0.7rem 1.5rem;">Request Report →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-card-inner">
+        <div class="resource-badge">AVAILABLE NOW</div>
+        <div class="resource-title">The $130 Billion Blind Spot</div>
+        <div class="resource-sub">Agritech Solutions for Poultry & Livestock — Emerging Markets 2026</div>
+        <div class="resource-desc">The first published report from Nexus Content Studio. Covers agritech solutions for poultry and livestock farming across five emerging markets. Three solutions. Five markets. Real data.</div>
+        <div class="resource-markets">
+          <span class="market-pill">Vietnam</span>
+          <span class="market-pill">India</span>
+          <span class="market-pill">Philippines</span>
+          <span class="market-pill">Brazil</span>
+          <span class="market-pill">Nigeria</span>
+        </div>
+        <div class="resource-footer">
+          <span class="resource-meta">Market Intelligence · 2026</span>
+          <a href="https://selar.com/782v73a38l" target="_blank" class="btn-primary" style="font-size:0.85rem; padding:0.7rem 1.5rem;">Get Report →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-card coming-soon">
+      <div class="resource-card-inner">
+        <div class="resource-badge coming">COMING SOON</div>
+        <div class="resource-title">White Paper: Beyond The Cloud</div>
+        <div class="resource-sub">The Case For Mesh-Networking In Global Agriculture</div>
+        <div class="resource-desc">A foundational white paper making the full case for open standard mesh network architecture in agricultural technology. Built for investors and government grant evaluators simultaneously.</div>
+        <div class="resource-footer">
+          <span class="resource-meta">White Paper · 2026</span>
+          <a href="mailto:Adewumi.writer@gmail.com?subject=Notify me: Beyond The Cloud White Paper" class="btn-secondary">Notify Me →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-bar"></div>
+
+<!-- INSIGHTS / NEWSLETTER -->
+<section id="insights" style="background: var(--dark);">
+  <div class="section-label">Newsletter & Insights</div>
+  <h2 class="section-title">Market Intelligence.<br><span>Delivered Consistently.</span></h2>
+  <div class="divider"></div>
+
+  <div class="insights-layout">
+    <div class="insights-left">
+      <p style="color:var(--white-mid); font-size:1.1rem; line-height:1.8; margin-bottom:1.5rem;">The Nexus Intelligence newsletter covers agritech market developments, founder stories, investor movements and emerging market analysis — written for founders and investors who do not have time to search for the signal inside the noise.</p>
+      <p style="color:var(--white-mid); font-size:1.1rem; line-height:1.8; margin-bottom:2.5rem;">Each edition is short, specific and backed by real research. No filler. No reposts. Original intelligence every time.</p>
+
+      <div class="insight-feature">
+        <div class="insight-icon">📊</div>
+        <div>
+          <div class="insight-feat-title">Market Data</div>
+          <div class="insight-feat-desc">Real numbers from real markets — emerging market funding trends, crop loss data, technology adoption rates.</div>
+        </div>
+      </div>
+      <div class="insight-feature">
+        <div class="insight-icon">🌍</div>
+        <div>
+          <div class="insight-feat-title">Emerging Market Focus</div>
+          <div class="insight-feat-desc">Nigeria, Kenya, India, Vietnam, Brazil — the markets where the real agritech opportunity lives.</div>
+        </div>
+      </div>
+      <div class="insight-feature">
+        <div class="insight-icon">📡</div>
+        <div>
+          <div class="insight-feat-title">Founder Spotlights</div>
+          <div class="insight-feat-desc">Agritech founders building real solutions across the world — their technology, their markets, their story.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insights-right">
+      <div class="newsletter-card">
+        <div class="newsletter-card-label">SUBSCRIBE FREE</div>
+        <div class="newsletter-card-title">Nexus Intelligence</div>
+        <div class="newsletter-card-sub">Agri-Tech Market Intelligence Newsletter</div>
+        <div class="newsletter-card-desc">Join founders, investors and agricultural professionals receiving original market intelligence from Nexus Content Studio.</div>
+        <form class="newsletter-form" action="https://formspree.io/f/mwvwylyl" method="POST">
+          <input type="hidden" name="form_type" value="newsletter_subscription">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>I am a...</label>
+            <input type="text" name="role" placeholder="Founder / Investor / Researcher / Other">
+          </div>
+          <button type="submit" class="form-submit" style="width:100%; text-align:center;">Subscribe to Nexus Intelligence →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest Edition Placeholder -->
+  <div style="margin-top:4rem;">
+    <div class="section-label" style="margin-bottom:1rem;">Latest Edition</div>
+    <div class="edition-card">
+      <div class="edition-tag">EDITION 01 · MARCH 2026</div>
+      <div class="edition-title">129,000 Companies. 6,200 Funded. The Agritech Visibility Crisis.</div>
+      <div class="edition-desc">Over 129,000 agritech companies are operating globally. Only 6,200 have ever received a single dollar of funding. This edition covers the visibility crisis behind that number — and what founders can do about it.</div>
+      <a href="mailto:Adewumi.writer@gmail.com?subject=Request: Edition 01 Nexus Intelligence" class="btn-secondary" style="margin-top:1rem; display:inline-block;">Read This Edition →</a>
+    </div>
+  </div>
+</section>
+
 
 <div class="gold-bar"></div>
 
